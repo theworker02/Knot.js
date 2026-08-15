@@ -101,13 +101,13 @@ The full data-flow note is [ARCHITECTURE.md](ARCHITECTURE.md).
 Requires **Node.js 20.10+**. TypeScript entrypoints (`knot run file.ts`) need **Node.js 22.6+** (type stripping). CommonJS `require` coverage uses Node customization hooks on **20.10+**.
 
 ```bash
-npm install -g knotjs
+npm install -g @magnexis/knotjs
 ```
 
 Without a global install:
 
 ```bash
-npx knotjs --help
+npx @magnexis/knotjs --help
 ```
 
 The global store defaults to `~/.knot`. Override with `KNOT_STORE`. See [installation](docs/installation.md).
@@ -115,7 +115,7 @@ The global store defaults to `~/.knot`. Override with `KNOT_STORE`. See [install
 ## 60-second example
 
 ```bash
-npm install -g knotjs
+npm install -g @magnexis/knotjs
 knot init
 knot run src/index.ts
 ```

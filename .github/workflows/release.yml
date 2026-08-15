@@ -20,7 +20,7 @@ jobs:
       - run: npm run build
       - run: npm test
       - run: npm pack --workspace @magnexis/knot.js-core
-      - run: npm pack --workspace knotjs
+      - run: npm pack --workspace @magnexis/knotjs
       - name: Checksums
         run: sha256sum *.tgz > SHA256SUMS
       - uses: softprops/action-gh-release@v2

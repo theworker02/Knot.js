@@ -2,12 +2,12 @@
   <img src="../../branding/logo.png" width="320" alt="Knot.js — Dependencies without node_modules">
 </p>
 
-# knotjs
+# @magnexis/knotjs
 
 CLI for Knot.js.
 
 ```bash
-npm install -g knotjs
+npm install -g @magnexis/knotjs
 knot init
 knot run src/index.ts
 ```

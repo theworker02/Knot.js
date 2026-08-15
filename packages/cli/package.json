@@ -1,5 +1,5 @@
 {
-  "name": "knotjs",
+  "name": "@magnexis/knotjs",
   "version": "0.3.0",
   "description": "Knot.js CLI — dependencies without node_modules",
   "license": "Apache-2.0",

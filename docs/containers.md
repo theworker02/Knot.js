@@ -6,7 +6,7 @@ Bind the Knot store as a cache mount so images do not grow a new `node_modules` 
 FROM node:22-bookworm-slim
 WORKDIR /app
 COPY . .
-RUN npm install -g knotjs
+RUN npm install -g @magnexis/knotjs
 ENV KNOT_STORE=/var/cache/knot
 RUN knot snapshot
 CMD ["knot", "run", "--offline", "--frozen", "src/index.ts"]

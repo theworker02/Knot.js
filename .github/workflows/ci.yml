@@ -104,4 +104,4 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm pack --dry-run --workspace @magnexis/knot.js-core
-      - run: npm pack --dry-run --workspace knotjs
+      - run: npm pack --dry-run --workspace @magnexis/knotjs
