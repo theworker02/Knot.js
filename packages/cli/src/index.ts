@@ -17,7 +17,7 @@ import {
   parseOlderThan,
   writeKnotToml,
   writeLockKeyPair,
-} from "@theworker02/knot.js-core";
+} from "@magnexis/knot.js-core";
 import { VERSION } from "./version.js";
 
 export { VERSION };

@@ -2,12 +2,12 @@
   <img src="../../branding/logo.png" width="320" alt="Knot.js — Dependencies without node_modules">
 </p>
 
-# @theworker02/knot.js-core
+# @magnexis/knot.js-core
 
 Programmatic API for Knot.js: content-addressed storage, npm resolution, verification, and execution.
 
 ```ts
-import { createKnot } from "@theworker02/knot.js-core";
+import { createKnot } from "@magnexis/knot.js-core";
 
 const knot = await createKnot({ cwd: process.cwd() });
 const dependency = await knot.resolve("zod");
