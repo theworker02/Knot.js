@@ -8,6 +8,7 @@
 
 <p align="center">
   <a href="https://github.com/theworker02/Knot.js/actions/workflows/ci.yml"><img src="https://github.com/theworker02/Knot.js/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://theworker02.github.io/Knot.js/"><img src="https://img.shields.io/badge/website-GitHub%20Pages-5ec8e8" alt="Website"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-0b0f14" alt="Apache-2.0"></a>
 </p>
 
@@ -501,6 +502,7 @@ The living list is [ROADMAP.md](ROADMAP.md). Changes land in [CHANGELOG.md](CHAN
 
 ## Documentation
 
+- [Website](https://theworker02.github.io/Knot.js/)
 - [Introduction](docs/introduction.md)
 - [Why Knot?](docs/why-knot.md)
 - [Quick start](docs/quick-start.md)
