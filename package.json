@@ -32,7 +32,7 @@
     "knot": "node packages/cli/dist/bin.js"
   },
   "devDependencies": {
-    "@eslint/js": "^9.18.0",
+    "@eslint/js": "^10.0.1",
     "@types/node": "^22.10.5",
     "@types/semver": "^7.5.8",
     "eslint": "^9.18.0",
