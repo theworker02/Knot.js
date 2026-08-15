@@ -7,10 +7,37 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/theworker02/Knot.js/actions/workflows/ci.yml"><img src="https://github.com/theworker02/Knot.js/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://www.npmjs.com/package/@magnexis/knotjs"><img src="https://img.shields.io/npm/v/@magnexis/knotjs?label=%40magnexis%2fknotjs" alt="npm CLI"></a>
+  <a href="https://www.npmjs.com/package/@magnexis/knot.js-core"><img src="https://img.shields.io/npm/v/@magnexis/knot.js-core?label=%40magnexis%2fknot.js-core" alt="npm core"></a>
+  <a href="https://github.com/theworker02/Knot.js"><img src="https://img.shields.io/github/v/release/theworker02/Knot.js" alt="GitHub release"></a>
   <a href="https://theworker02.github.io/Knot.js/"><img src="https://img.shields.io/badge/website-GitHub%20Pages-5ec8e8" alt="Website"></a>
+  <a href="https://github.com/theworker02/Knot.js/actions/workflows/ci.yml"><img src="https://github.com/theworker02/Knot.js/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-0b0f14" alt="Apache-2.0"></a>
 </p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/@magnexis/knotjs">npm CLI</a>
+  ·
+  <a href="https://www.npmjs.com/package/@magnexis/knot.js-core">npm core</a>
+  ·
+  <a href="https://github.com/theworker02/Knot.js">GitHub</a>
+  ·
+  <a href="https://theworker02.github.io/Knot.js/">Website</a>
+  ·
+  <a href="https://github.com/theworker02/Knot.js/releases/latest">Release</a>
+</p>
+
+## Packages
+
+| Package                                                          | Version                                                       | Install                              |
+| ---------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------ |
+| [CLI](https://www.npmjs.com/package/@magnexis/knotjs) (`knot`)   | [0.3.1](https://www.npmjs.com/package/@magnexis/knotjs)       | `npm install -g @magnexis/knotjs`    |
+| [Core API](https://www.npmjs.com/package/@magnexis/knot.js-core) | [0.3.0](https://www.npmjs.com/package/@magnexis/knot.js-core) | `npm install @magnexis/knot.js-core` |
+
+```bash
+npm install -g @magnexis/knotjs
+npm install @magnexis/knot.js-core
+```
 
 ---
 
@@ -103,6 +130,14 @@ Requires **Node.js 20.10+**. TypeScript entrypoints (`knot run file.ts`) need **
 ```bash
 npm install -g @magnexis/knotjs
 ```
+
+Programmatic API:
+
+```bash
+npm install @magnexis/knot.js-core
+```
+
+Packages: [@magnexis/knotjs](https://www.npmjs.com/package/@magnexis/knotjs) (CLI 0.3.1) and [@magnexis/knot.js-core](https://www.npmjs.com/package/@magnexis/knot.js-core) (0.3.0).
 
 Without a global install:
 
