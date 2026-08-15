@@ -1,0 +1,14 @@
+[project]
+name = "api"
+version = "0.1.0"
+runtime = "node"
+
+[dependencies]
+shared = "workspace:*"
+
+[workspace]
+members = ["../../packages/shared"]
+
+[knot]
+mode = "lazy"
+integrity = "strict"

@@ -1,0 +1,15 @@
+[project]
+name = "hello-world"
+version = "0.1.0"
+runtime = "node"
+
+[dependencies]
+
+[knot]
+mode = "lazy"
+integrity = "strict"
+offline = false
+
+[security.scripts]
+default = "deny"
+allow = []

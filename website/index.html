@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Knot.js — Dependencies without node_modules</title>
+    <meta
+      name="description"
+      content="A content-addressed JavaScript execution framework that replaces project-local node_modules."
+    />
+    <link rel="icon" href="../branding/favicon.png" type="image/png" />
+    <link rel="icon" href="../branding/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <a class="brand" href="./index.html">
+        <img src="../branding/logo-mark.png" width="32" height="32" alt="" />
+        Knot.js
+      </a>
+      <nav>
+        <a href="../docs/quick-start.md">Docs</a>
+        <a href="../docs/cli.md">CLI</a>
+        <a href="https://github.com/theworker02/Knot.js">GitHub</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <h1 class="sr-only">Knot.js — Dependencies without node_modules</h1>
+        <img
+          class="hero-logo"
+          src="../branding/logo.png"
+          width="420"
+          height="420"
+          alt="Knot.js — Dependencies without node_modules"
+        />
+        <p>
+          Knot is an experimental content-addressed execution framework for JavaScript and TypeScript. Declare what a
+          program may use. Knot resolves, verifies, caches, and runs it.
+        </p>
+        <pre class="cmd">
+git clone &lt;project&gt;
+cd project
+knot run</pre>
+      </section>
+      <section class="compare">
+        <article>
+          <h2>Traditional</h2>
+          <pre>
+project
+└── node_modules
+    ├── dependency
+    ├── dependency
+    ├── dependency
+    └── thousands more files</pre>
+        </article>
+        <article>
+          <h2>Knot</h2>
+          <pre>
+project
+│
+└──────────────┐
+               ↓
+         Content Graph
+               ↓
+          ~/.knot/store
+          ↙     ↓     ↘
+      Project Project Project</pre>
+        </article>
+      </section>
+      <section>
+        <h2>What Knot actually does</h2>
+        <ul>
+          <li>Identifies artifacts by SHA-256, not folder location</li>
+          <li>Materializes packages when execution needs them</li>
+          <li>Refuses corrupt cache objects</li>
+          <li>Signs lockfiles with a developer key when you configure one</li>
+          <li>Verifies npm attestations without confusing content for publisher identity</li>
+          <li>Denies install scripts unless you allow them</li>
+          <li>Stays ejectable</li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>
+        0.x experimental. Apache-2.0. <a href="../docs/compatibility.md">Compatibility is evidenced, not implied.</a>
+      </p>
+    </footer>
+  </body>
+</html>

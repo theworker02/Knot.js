@@ -1,0 +1,7 @@
+dist
+node_modules
+coverage
+*.tgz
+branding/social-preview.png
+CHANGELOG.md
+LICENSE

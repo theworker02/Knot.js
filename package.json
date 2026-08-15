@@ -1,0 +1,44 @@
+{
+  "name": "knot-monorepo",
+  "private": true,
+  "type": "module",
+  "version": "0.3.0",
+  "description": "Knot.js monorepo — content-addressed JavaScript dependency execution",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=20.10.0"
+  },
+  "workspaces": [
+    "packages/core",
+    "packages/cli"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "clean": "npm run clean --workspaces --if-present",
+    "test": "node tooling/run-tests.mjs tests",
+    "test:unit": "node tooling/run-tests.mjs tests/unit",
+    "test:integration": "node tooling/run-tests.mjs tests/integration",
+    "test:compat": "node tooling/run-tests.mjs tests/compatibility",
+    "test:corruption": "node tooling/run-tests.mjs tests/corruption",
+    "test:concurrency": "node tooling/run-tests.mjs tests/concurrency",
+    "test:offline": "node tooling/run-tests.mjs tests/offline",
+    "test:corpus": "node tooling/run-tests.mjs tests/corpus",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "docs:check": "node tooling/check-docs.mjs",
+    "bench": "node --import tsx benchmarks/run.ts",
+    "knot": "node packages/cli/dist/bin.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@types/node": "^22.10.5",
+    "@types/semver": "^7.5.8",
+    "eslint": "^9.18.0",
+    "prettier": "^3.4.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.20.0"
+  }
+}

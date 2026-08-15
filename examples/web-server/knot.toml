@@ -1,0 +1,10 @@
+[project]
+name = "web-server"
+version = "0.1.0"
+runtime = "node"
+
+[dependencies]
+
+[knot]
+mode = "prefetch"
+integrity = "strict"

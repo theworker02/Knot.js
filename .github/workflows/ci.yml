@@ -1,0 +1,106 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    name: lint-format-types
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run format:check
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run docs:check
+
+  test:
+    name: tests (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node: [22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm run test:unit
+      - run: npm run test:integration
+      - run: npm run test:corruption
+      - run: npm run test:concurrency
+      - run: npm run test:offline
+      - run: npm run test:compat
+
+  corpus:
+    name: npm-corpus
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm run test:corpus
+        env:
+          KNOT_CORPUS: "1"
+
+  examples:
+    name: examples
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: node ../../packages/cli/dist/bin.js run src/index.ts
+        working-directory: examples/hello-world
+      - run: node ../../packages/cli/dist/bin.js run src/index.ts
+        working-directory: examples/typescript
+      - run: node ../../packages/cli/dist/bin.js run src/index.ts -- --help
+        working-directory: examples/cli
+      - run: node ../../packages/cli/dist/bin.js run src/index.ts
+        working-directory: examples/offline
+        env:
+          KNOT_EXAMPLE_ONCE: "1"
+      - run: node ../../../packages/cli/dist/bin.js run src/index.ts
+        working-directory: examples/monorepo/apps/api
+      - run: node ../../packages/cli/dist/bin.js run src/index.ts
+        working-directory: examples/native-addon
+        env:
+          KNOT_EXAMPLE_ONCE: "1"
+      - run: node ../../packages/cli/dist/bin.js run src/index.ts
+        working-directory: examples/web-server
+        env:
+          KNOT_EXAMPLE_ONCE: "1"
+
+  package:
+    name: package-validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm pack --dry-run --workspace @knotjs/core
+      - run: npm pack --dry-run --workspace knotjs

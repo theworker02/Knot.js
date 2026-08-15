@@ -1,0 +1,11 @@
+[project]
+name = "monorepo-root"
+version = "0.1.0"
+runtime = "node"
+
+[workspace]
+members = ["apps/api", "packages/shared"]
+
+[knot]
+mode = "lazy"
+integrity = "strict"

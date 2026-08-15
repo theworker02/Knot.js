@@ -1,0 +1,14 @@
+[project]
+name = "native-addon-example"
+version = "0.1.0"
+runtime = "node"
+
+[dependencies]
+
+[knot]
+mode = "lazy"
+integrity = "strict"
+
+[security.scripts]
+default = "deny"
+allow = []

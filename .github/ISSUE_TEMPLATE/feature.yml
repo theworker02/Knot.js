@@ -1,0 +1,23 @@
+name: Feature
+description: A change to the execution model or tooling
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+    validations:
+      required: true
+  - type: checkboxes
+    id: honesty
+    attributes:
+      label: Constraints
+      options:
+        - label: This can be implemented without faking compatibility
+        - label: This does not require silently running lifecycle scripts

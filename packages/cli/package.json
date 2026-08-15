@@ -1,0 +1,49 @@
+{
+  "name": "knotjs",
+  "version": "0.3.0",
+  "description": "Knot.js CLI — dependencies without node_modules",
+  "license": "Apache-2.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20.10.0"
+  },
+  "bin": {
+    "knot": "./dist/bin.js",
+    "knotjs": "./dist/bin.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theworker02/Knot.js.git",
+    "directory": "packages/cli"
+  },
+  "homepage": "https://github.com/theworker02/Knot.js",
+  "bugs": {
+    "url": "https://github.com/theworker02/Knot.js/issues"
+  },
+  "keywords": [
+    "knot",
+    "cli",
+    "package-manager",
+    "content-addressed",
+    "javascript",
+    "typescript"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@knotjs/core": "0.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5"
+  }
+}

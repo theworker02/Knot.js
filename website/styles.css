@@ -1,0 +1,114 @@
+:root {
+  color-scheme: dark;
+  --bg: #0b0f14;
+  --fg: #e8eef4;
+  --muted: #8b9bb0;
+  --accent: #5ec8e8;
+  --surface: #121821;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font:
+    16px/1.55 "Segoe UI",
+    system-ui,
+    sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+a {
+  color: var(--accent);
+}
+
+.nav,
+footer,
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  color: var(--fg);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.brand img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #000;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero {
+  padding: 2rem 0 3rem;
+  text-align: center;
+}
+
+.hero-logo {
+  display: block;
+  width: min(100%, 420px);
+  height: auto;
+  margin: 0 auto 1.25rem;
+  background: #000;
+  border-radius: 20px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.cmd,
+.compare pre {
+  background: var(--surface);
+  padding: 1rem 1.1rem;
+  overflow: auto;
+  border-radius: 8px;
+}
+
+.compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 720px) {
+  .compare {
+    grid-template-columns: 1fr;
+  }
+}
+
+footer,
+.muted,
+.hero p {
+  color: var(--muted);
+}
