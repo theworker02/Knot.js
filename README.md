@@ -298,11 +298,11 @@ Full command list: [CLI reference](docs/cli.md). Programmatic surface: [JavaScri
 
 These are three different claims. Do not collapse them.
 
-| Mechanism | What it proves | What it does not prove |
-| --- | --- | --- |
-| **`lockDigest`** | The canonical package list in `knot.lock` has not been mutated since the digest was written. Tamper evidence. | Who published an npm package. Who signed the lock. |
-| **Developer `lockSignature`** | A holder of the project Ed25519 key signed that digest. | Publisher identity. That the packages are safe. |
-| **npm provenance attestation** | DSSE signature + subject-to-artifact binding, and (only with a trusted root) a certificate chain. | Content integrity by itself. Public-good Fulcio/Rekor trust unless you pin that root. |
+| Mechanism                      | What it proves                                                                                                | What it does not prove                                                                |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| **`lockDigest`**               | The canonical package list in `knot.lock` has not been mutated since the digest was written. Tamper evidence. | Who published an npm package. Who signed the lock.                                    |
+| **Developer `lockSignature`**  | A holder of the project Ed25519 key signed that digest.                                                       | Publisher identity. That the packages are safe.                                       |
+| **npm provenance attestation** | DSSE signature + subject-to-artifact binding, and (only with a trusted root) a certificate chain.             | Content integrity by itself. Public-good Fulcio/Rekor trust unless you pin that root. |
 
 ### Lock digest
 
@@ -324,11 +324,11 @@ When a public key is configured, `knot verify`, `knot ci`, and `--frozen` refuse
 
 npm can attach Sigstore provenance attestations to a published version. Knot can fetch and verify those statements. Presence is not identity.
 
-| Check | Meaning | Enough for `publisherVerified`? |
-| --- | --- | --- |
-| DSSE signature vs embedded certificate | The statement was signed by the key in the bundle | No |
-| Subject digest vs stored artifact | The statement names the bytes Knot has | No |
-| Certificate chain vs trusted roots | The signer is anchored to a root you supplied | Required |
+| Check                                  | Meaning                                           | Enough for `publisherVerified`? |
+| -------------------------------------- | ------------------------------------------------- | ------------------------------- |
+| DSSE signature vs embedded certificate | The statement was signed by the key in the bundle | No                              |
+| Subject digest vs stored artifact      | The statement names the bytes Knot has            | No                              |
+| Certificate chain vs trusted roots     | The signer is anchored to a root you supplied     | Required                        |
 
 `publisherVerified` is true **only** when all three succeed. A matching `dist.integrity` or content hash never establishes publisher identity. Live registry tests assert the first two checks against real npm bundles and keep `publisherVerified` false when no root is configured.
 

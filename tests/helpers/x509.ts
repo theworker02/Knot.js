@@ -33,7 +33,7 @@ function issueCertificate(
   options: { subject: string; issuerKey: KeyObject; issuerName: string; ca: boolean },
 ): TestCertificate {
   const serial = randomBytes(8);
-  serial[0] = serial[0]! & 0x7f;
+  serial[0] = serial[0]! & 0x7f || 0x01;
   const now = new Date();
   const notBefore = new Date(now.getTime() - 60_000);
   const notAfter = new Date(now.getTime() + 365 * 24 * 60 * 60 * 1000);
@@ -98,6 +98,9 @@ function context(tag: number, inner: Buffer): Buffer {
 function integer(value: Buffer): Buffer {
   let bytes = value;
   if (bytes.length === 0) bytes = Buffer.from([0]);
+  while (bytes.length > 1 && bytes[0] === 0x00 && (bytes[1]! & 0x80) === 0) {
+    bytes = bytes.subarray(1);
+  }
   if (bytes[0]! & 0x80) bytes = Buffer.concat([Buffer.from([0]), bytes]);
   return tlv(0x02, bytes);
 }

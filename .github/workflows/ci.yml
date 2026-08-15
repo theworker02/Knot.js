@@ -80,7 +80,7 @@ jobs:
         working-directory: examples/offline
         env:
           KNOT_EXAMPLE_ONCE: "1"
-      - run: node ../../../packages/cli/dist/bin.js run src/index.ts
+      - run: node ../../../../packages/cli/dist/bin.js run src/index.ts
         working-directory: examples/monorepo/apps/api
       - run: node ../../packages/cli/dist/bin.js run src/index.ts
         working-directory: examples/native-addon

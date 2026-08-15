@@ -53,14 +53,16 @@ function signedBundle(options: {
 }
 
 test("generated certificates verify as a chain", () => {
-  const ca = createTestCertificateAuthority();
-  const leaf = issueLeafCertificate(ca);
-  const leafCert = new X509Certificate(leaf.certPem);
-  const caCert = new X509Certificate(ca.certPem);
-  assert.equal(caCert.verify(caCert.publicKey), true);
-  assert.equal(leafCert.verify(caCert.publicKey), true);
-  assert.equal(verifyCertificateChain(leafCert, [ca.certPem]), true);
-  assert.equal(verifyCertificateChain(leafCert, []), false);
+  for (let i = 0; i < 32; i += 1) {
+    const ca = createTestCertificateAuthority();
+    const leaf = issueLeafCertificate(ca);
+    const leafCert = new X509Certificate(leaf.certPem);
+    const caCert = new X509Certificate(ca.certPem);
+    assert.equal(caCert.verify(caCert.publicKey), true);
+    assert.equal(leafCert.verify(caCert.publicKey), true);
+    assert.equal(verifyCertificateChain(leafCert, [ca.certPem]), true);
+    assert.equal(verifyCertificateChain(leafCert, []), false);
+  }
 });
 
 test("attestation verification requires signature, subject, and a trusted root for publisher identity", () => {
