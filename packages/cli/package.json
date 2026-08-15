@@ -44,6 +44,6 @@
     "@knotjs/core": "0.3.0"
   },
   "devDependencies": {
-    "@types/node": "^22.10.5"
+    "@types/node": "^26.2.0"
   }
 }
