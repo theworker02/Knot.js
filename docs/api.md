@@ -1,7 +1,7 @@
 # JavaScript API
 
 ```ts
-import { createKnot } from "@knotjs/core";
+import { createKnot } from "@theworker02/knot.js-core";
 
 const knot = await createKnot({
   cwd: process.cwd(),

@@ -4,10 +4,10 @@ Knot is a TypeScript monorepo with two published packages:
 
 | Package        | Role                                                            |
 | -------------- | --------------------------------------------------------------- |
-| `@knotjs/core` | Store, resolver, registry source, runtime, security, public API |
+| `@theworker02/knot.js-core` | Store, resolver, registry source, runtime, security, public API |
 | `knotjs`       | CLI (`knot`)                                                    |
 
-Internal modules inside `@knotjs/core` match the conceptual packages from the design: `store`, `resolver`, `runtime`, `security`, `registry`. They are not separate npm packages. Extra package boundaries would add versioning cost without changing the execution model.
+Internal modules inside `@theworker02/knot.js-core` match the conceptual packages from the design: `store`, `resolver`, `runtime`, `security`, `registry`. They are not separate npm packages. Extra package boundaries would add versioning cost without changing the execution model.
 
 ## Data flow
 

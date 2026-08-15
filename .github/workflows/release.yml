@@ -19,7 +19,7 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm test
-      - run: npm pack --workspace @knotjs/core
+      - run: npm pack --workspace @theworker02/knot.js-core
       - run: npm pack --workspace knotjs
       - name: Checksums
         run: sha256sum *.tgz > SHA256SUMS

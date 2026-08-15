@@ -41,7 +41,7 @@
     "typecheck": "tsc -b"
   },
   "dependencies": {
-    "@knotjs/core": "0.3.0"
+    "@theworker02/knot.js-core": "0.3.0"
   },
   "devDependencies": {
     "@types/node": "^22.10.5"
