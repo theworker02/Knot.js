@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.3.1] - 2026-08-15
+
+### Fixed
+
+- Restore the `knot` / `knotjs` npm bin entries. npm 11 treats `./`-prefixed bin paths as invalid and strips them on publish.
+
 ## [0.3.0] - 2026-08-15
 
 ### Added
