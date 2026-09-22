@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="branding/logo.png" width="420" alt="Knot.js Ã¢â‚¬â€ Dependencies without node_modules">
+  <img src="branding/logo.png" width="420" alt="Knot.js ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Dependencies without node_modules">
 </p>
 
 <p align="center">
@@ -12,26 +12,7 @@
   <a href="https://github.com/theworker02/Knot.js"><img src="https://img.shields.io/github/v/release/theworker02/Knot.js" alt="GitHub release"></a>
   <a href="https://theworker02.github.io/Knot.js/"><img src="https://img.shields.io/badge/website-GitHub%20Pages-5ec8e8" alt="Website"></a>
   <a href="https://github.com/theworker02/Knot.js/actions/workflows/ci.yml"><img src="https://github.com/theworker02/Knot.js/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-0b0f14" alt="source-available proprietary"></a>
-</p>
-
-<p align="center">
-  <a href="https://www.npmjs.com/package/@magnexis/knotjs">npm CLI</a>
-  Ã‚Â·
-  <a href="https://www.npmjs.com/package/@magnexis/knot.js-core">npm core</a>
-  Ã‚Â·
-  <a href="https://github.com/theworker02/Knot.js">GitHub</a>
-  Ã‚Â·
-  <a href="https://theworker02.github.io/Knot.js/">Website</a>
-  Ã‚Â·
-  <a href="https://github.com/theworker02/Knot.js/releases/latest">Release</a>
-</p>
-
-## Packages
-
-| Package                                                          | Version                                                       | Install                              |
-| ---------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------ |
-| [CLI](https://www.npmjs.com/package/@magnexis/knotjs) (`knot`)   | [0.3.1](https://www.npmjs.com/package/@magnexis/knotjs)       | `npm install -g @magnexis/knotjs`    |
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-proprietary-0B1F33) (`knot`)   | [0.3.1](https://www.npmjs.com/package/@magnexis/knotjs)       | `npm install -g @magnexis/knotjs`    |
 | [Core API](https://www.npmjs.com/package/@magnexis/knot.js-core) | [0.3.0](https://www.npmjs.com/package/@magnexis/knot.js-core) | `npm install @magnexis/knot.js-core` |
 
 ```bash
@@ -44,10 +25,10 @@ npm install @magnexis/knot.js-core
 Knot challenges one of the oldest assumptions in the Node.js ecosystem: that an entire dependency tree must be installed into a project-local `node_modules/` directory before a program can run.
 
 ```text
-declare Ã¢â€ â€™ resolve Ã¢â€ â€™ verify Ã¢â€ â€™ store Ã¢â€ â€™ execute
-              Ã¢â€ â€¢
+declare ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ resolve ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ verify ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ store ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ execute
+              ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬Â¢
      retrieve when necessary
-              Ã¢â€ â€¢
+              ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬Â¢
      share immutable content
 ```
 
@@ -63,7 +44,7 @@ Knot is a **dependency execution** system. A project declares the packages it is
 2. Retrieves missing artifacts only when they are needed, or when you snapshot them.
 3. Verifies size, integrity, and content address before anything is executed.
 4. Stores immutable objects in a global content store (`~/.knot` by default).
-5. Executes the program through a Node.js loader Ã¢â‚¬â€ without a project-local `node_modules/`.
+5. Executes the program through a Node.js loader ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â without a project-local `node_modules/`.
 
 The same verified bytes can be reused by every Knot project on the machine. Cache presence is never treated as proof of integrity: objects are re-hashed before execution.
 
@@ -71,7 +52,7 @@ See [Why Knot?](docs/why-knot.md) and [concepts](docs/concepts.md).
 
 ## What Knot is not
 
-- **Not a drop-in npm clone.** It does not recreate hoisting, plugins, or patch workflows. Unsupported cases fail with a `KNOT_*` code and a hint Ã¢â‚¬â€ not a silent fallback.
+- **Not a drop-in npm clone.** It does not recreate hoisting, plugins, or patch workflows. Unsupported cases fail with a `KNOT_*` code and a hint ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â not a silent fallback.
 - **Not 1.0.** Compatibility is evidenced by tests, not hoped for on a marketing page. See [ROADMAP.md](ROADMAP.md).
 - **Not a sandbox.** Verified bytes can still be malware. Knot makes substitution, corruption, and surprise install scripts difficult. It does not decide that JavaScript is trustworthy.
 - **Not a publisher-identity system by default.** A matching content hash means the bytes are the bytes. It does not mean the publisher is who you think they are. See [attestations](docs/attestations.md) and [THREAT_MODEL.md](THREAT_MODEL.md).
@@ -81,18 +62,18 @@ See [Why Knot?](docs/why-knot.md) and [concepts](docs/concepts.md).
 
 ```text
                     KNOT
-Application Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€ â€™ Resolver Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€ â€™ Execution
-                   Ã¢â€â€š
-          Ã¢â€Å’Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€Â´Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€Â
-          Ã¢â€ â€œ                 Ã¢â€ â€œ
+Application ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ Resolver ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ Execution
+                   ÃƒÂ¢Ã¢â‚¬ÂÃ¢â‚¬Å¡
+          ÃƒÂ¢Ã¢â‚¬ÂÃ…â€™ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ‚Â´ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ‚Â
+          ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬Å“                 ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬Å“
     Content Store      Package Sources
-          Ã¢â€ â€˜
-          Ã¢â€â€š
+          ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬Ëœ
+          ÃƒÂ¢Ã¢â‚¬ÂÃ¢â‚¬Å¡
      Shared Cache
 ```
 
 1. **Declare.** `package.json` remains the source of names, versions, and dependencies. `knot.toml` holds Knot-specific policy: mode, integrity, offline, script allowlists, workspace members. You do not copy the dependency list into `knot.toml`.
-2. **Resolve.** Resolution is parent-aware. When `parent-pkg` imports `child-pkg`, Knot uses `parent-pkg`'s declared range Ã¢â‚¬â€ not a hoisted tree and not the applicationÃ¢â‚¬â„¢s dependency list. Undeclared imports fail with `KNOT_UNDECLARED_DEPENDENCY`. Details: [resolution](docs/resolution.md).
+2. **Resolve.** Resolution is parent-aware. When `parent-pkg` imports `child-pkg`, Knot uses `parent-pkg`'s declared range ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â not a hoisted tree and not the applicationÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢s dependency list. Undeclared imports fail with `KNOT_UNDECLARED_DEPENDENCY`. Details: [resolution](docs/resolution.md).
 3. **Verify.** Every downloaded object passes size checks, npm `dist.integrity` when present, content addressing, and metadata before an atomic insert. Partially written artifacts are never executed.
 4. **Store.** Objects live under `~/.knot` (`KNOT_STORE` overrides). Writes go to `tmp/` and are renamed into place. Projects register reachable objects so garbage collection cannot delete live content. Details: [content store](docs/content-store.md).
 5. **Execute.** A Node customization hook intercepts bare specifiers and returns a `file:` URL into the unpacked content-addressed directory. There is no project-local `node_modules/`.
@@ -101,23 +82,23 @@ Traditional install:
 
 ```text
 project
-Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ node_modules
-    Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ dependency
-    Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ dependency
-    Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ thousands more files
+ÃƒÂ¢Ã¢â‚¬ÂÃ¢â‚¬ÂÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ node_modules
+    ÃƒÂ¢Ã¢â‚¬ÂÃ…â€œÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ dependency
+    ÃƒÂ¢Ã¢â‚¬ÂÃ…â€œÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ dependency
+    ÃƒÂ¢Ã¢â‚¬ÂÃ¢â‚¬ÂÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ thousands more files
 ```
 
 Knot:
 
 ```text
 project
-Ã¢â€â€š
-Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€Â
-               Ã¢â€ â€œ
+ÃƒÂ¢Ã¢â‚¬ÂÃ¢â‚¬Å¡
+ÃƒÂ¢Ã¢â‚¬ÂÃ¢â‚¬ÂÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ‚Â
+               ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬Å“
          Content Graph
-               Ã¢â€ â€œ
+               ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬Å“
           ~/.knot/store
-          Ã¢â€ â„¢     Ã¢â€ â€œ     Ã¢â€ Ëœ
+          ÃƒÂ¢Ã¢â‚¬Â Ã¢â€žÂ¢     ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬Å“     ÃƒÂ¢Ã¢â‚¬Â Ã‹Å“
       Project Project Project
 ```
 
@@ -188,27 +169,27 @@ More of the same path: [quick start](docs/quick-start.md).
 
 ## Project layout
 
-A Knot project is a directory with policy and a lock Ã¢â‚¬â€ not a local install tree.
+A Knot project is a directory with policy and a lock ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â not a local install tree.
 
 ```text
 my-app/
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ knot.toml          # Knot policy (mode, integrity, scripts, workspaces)
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ knot.lock          # Resolved graph, integrity, object ids, lockDigest
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ package.json       # Names, versions, dependencies, imports (when present)
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ src/index.ts
-Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ .knot/lock.pub     # Optional developer lock public key
+ÃƒÂ¢Ã¢â‚¬ÂÃ…â€œÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ knot.toml          # Knot policy (mode, integrity, scripts, workspaces)
+ÃƒÂ¢Ã¢â‚¬ÂÃ…â€œÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ knot.lock          # Resolved graph, integrity, object ids, lockDigest
+ÃƒÂ¢Ã¢â‚¬ÂÃ…â€œÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ package.json       # Names, versions, dependencies, imports (when present)
+ÃƒÂ¢Ã¢â‚¬ÂÃ…â€œÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ src/index.ts
+ÃƒÂ¢Ã¢â‚¬ÂÃ¢â‚¬ÂÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ .knot/lock.pub     # Optional developer lock public key
 ```
 
 There is no `node_modules/`. The store is global:
 
 ```text
 ~/.knot/
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ objects/           # Immutable content-addressed bytes
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ metadata/
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ unpacked/          # Extracted packages the loader points at
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ indexes/projects/  # Reachable objects per project (GC safety)
-Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ keys/lock.ed25519  # Default developer lock private key
-Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ Ã¢â‚¬Â¦
+ÃƒÂ¢Ã¢â‚¬ÂÃ…â€œÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ objects/           # Immutable content-addressed bytes
+ÃƒÂ¢Ã¢â‚¬ÂÃ…â€œÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ metadata/
+ÃƒÂ¢Ã¢â‚¬ÂÃ…â€œÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ unpacked/          # Extracted packages the loader points at
+ÃƒÂ¢Ã¢â‚¬ÂÃ…â€œÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ indexes/projects/  # Reachable objects per project (GC safety)
+ÃƒÂ¢Ã¢â‚¬ÂÃ…â€œÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ keys/lock.ed25519  # Default developer lock private key
+ÃƒÂ¢Ã¢â‚¬ÂÃ¢â‚¬ÂÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦
 ```
 
 `knot.toml` looks like this (from the hello-world example):
@@ -240,8 +221,8 @@ lockVersion = 1
 name = "zod"
 version = "4.0.0"
 source = "npm"
-integrity = "sha512-Ã¢â‚¬Â¦"
-object = "sha256:Ã¢â‚¬Â¦"
+integrity = "sha512-ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦"
+object = "sha256:ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦"
 ```
 
 The lock also records `lockDigest` (a SHA-256 of the canonical package list) and, optionally, a developer `lockSignature`. See [lockfiles](docs/lockfiles.md).
@@ -251,7 +232,7 @@ The lock also records `lockDigest` (a SHA-256 of the canonical package list) and
 An executable dependency is identified by cryptographic content, not merely `name@version`:
 
 ```text
-sha256:8c23Ã¢â‚¬Â¦e4a1
+sha256:8c23ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦e4a1
 ```
 
 Identity in Knot:
@@ -272,17 +253,17 @@ Bare specifiers are resolved when the runtime encounters them. Transitive depend
 
 ```text
 Application starts
-       Ã¢â€ â€œ
+       ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬Å“
    Encounter dependency
-       Ã¢â€ â€œ
+       ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬Å“
 Check resolution index
-       Ã¢â€ â€œ
+       ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬Å“
 Check local content store
-       Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ PRESENT Ã¢â€ â€™ verify Ã¢â€ â€™ execute
-       Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ MISSING Ã¢â€ â€™ resolve Ã¢â€ â€™ retrieve Ã¢â€ â€™ verify Ã¢â€ â€™ atomically cache Ã¢â€ â€™ execute
+       ÃƒÂ¢Ã¢â‚¬ÂÃ…â€œÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ PRESENT ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ verify ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ execute
+       ÃƒÂ¢Ã¢â‚¬ÂÃ¢â‚¬ÂÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ MISSING ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ resolve ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ retrieve ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ verify ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ atomically cache ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ execute
 ```
 
-Prefetch mode statically scans obvious `import`, `export from`, and `require("Ã¢â‚¬Â¦")` strings and overlaps retrieval with startup. It is not complete program analysis: computed `import()` specifiers are not prefetched and fail at runtime if the package was never declared or cached.
+Prefetch mode statically scans obvious `import`, `export from`, and `require("ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦")` strings and overlaps retrieval with startup. It is not complete program analysis: computed `import()` specifiers are not prefetched and fail at runtime if the package was never declared or cached.
 
 Frozen and offline modes refuse drift and network access.
 
@@ -376,7 +357,7 @@ Deep pages: [lockfiles](docs/lockfiles.md), [attestations](docs/attestations.md)
 Every downloaded object passes:
 
 ```text
-Download Ã¢â€ â€™ size checks Ã¢â€ â€™ integrity Ã¢â€ â€™ content address Ã¢â€ â€™ metadata Ã¢â€ â€™ atomic insert
+Download ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ size checks ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ integrity ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ content address ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ metadata ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ atomic insert
 ```
 
 Partially written artifacts are never executed. Lifecycle scripts (`postinstall`, `install`, and friends) are **denied by default**. A package that needs `node-gyp rebuild` does not get it because a tarball asked. Allowlist only if you accept the script:
@@ -391,12 +372,12 @@ Verified content is **not** a verified publisher. Knot claims verified content w
 
 What Knot currently mitigates, and what it does not:
 
-- **Wrong bytes from a registry or MITM** Ã¢â‚¬â€ partial. npm `dist.integrity` is verified when present; HTTPS is used; a registry without integrity fails closed in strict mode when integrity is required. Source authenticity is still not publisher identity.
-- **Corrupt local cache** Ã¢â‚¬â€ yes. Objects are re-hashed; corrupt objects are not executed.
-- **Malicious lifecycle scripts** Ã¢â‚¬â€ yes by default. Denied unless allowlisted.
-- **Lockfile tampering** Ã¢â‚¬â€ partial. `lockDigest` plus optional developer `lockSignature`.
-- **Fake npm provenance** Ã¢â‚¬â€ partial. DSSE + subject binding are verified; publisher identity requires a pinned trusted root.
-- **A compromised-but-intact package** Ã¢â‚¬â€ no. Verified bytes can still be malicious. Knot executes them if the developer declared the dependency.
+- **Wrong bytes from a registry or MITM** ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â partial. npm `dist.integrity` is verified when present; HTTPS is used; a registry without integrity fails closed in strict mode when integrity is required. Source authenticity is still not publisher identity.
+- **Corrupt local cache** ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â yes. Objects are re-hashed; corrupt objects are not executed.
+- **Malicious lifecycle scripts** ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â yes by default. Denied unless allowlisted.
+- **Lockfile tampering** ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â partial. `lockDigest` plus optional developer `lockSignature`.
+- **Fake npm provenance** ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â partial. DSSE + subject binding are verified; publisher identity requires a pinned trusted root.
+- **A compromised-but-intact package** ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â no. Verified bytes can still be malicious. Knot executes them if the developer declared the dependency.
 
 Knot does not sandbox application code, replace a software bill of materials, or make a malicious-but-intact tarball safe.
 
@@ -408,7 +389,7 @@ knot doctor
 
 `knot verify` re-hashes every object reachable from the current lock and, when a developer public key is configured, checks `lockSignature`. `knot audit` queries OSV when the network is available and says so when it is not. `knot doctor` reports store permissions, orphaned temps, missing lock objects, and registry reachability.
 
-Report integrity, store-poisoning, path-traversal, script-policy, and provenance bugs privately Ã¢â‚¬â€ see [SECURITY.md](SECURITY.md). The honest residual-risk note is [THREAT_MODEL.md](THREAT_MODEL.md).
+Report integrity, store-poisoning, path-traversal, script-policy, and provenance bugs privately ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â see [SECURITY.md](SECURITY.md). The honest residual-risk note is [THREAT_MODEL.md](THREAT_MODEL.md).
 
 ## Compatibility (what is actually tested)
 
@@ -435,10 +416,10 @@ Known limits, stated as such:
 - Computed `import()` specifiers are unsupported and fail at runtime
 - `optionalDependencies` are fetched only if imported
 - `peerDependencies` resolve from the project (parent-aware range lookup)
-- Yarn/pnpm plugins and patches are unsupported Ã¢â‚¬â€ migrate reads versions only
+- Yarn/pnpm plugins and patches are unsupported ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â migrate reads versions only
 - Bun / Deno runtimes are unsupported (adapter not proven)
 
-If a package needs an unsupported feature, Knot must fail with a `KNOT_*` code and a hint Ã¢â‚¬â€ not pretend the package loaded. Common codes: [troubleshooting](docs/troubleshooting.md).
+If a package needs an unsupported feature, Knot must fail with a `KNOT_*` code and a hint ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â not pretend the package loaded. Common codes: [troubleshooting](docs/troubleshooting.md).
 
 ## Workspaces, imports, and CommonJS
 
@@ -499,7 +480,7 @@ knot migrate --dry-run
 knot migrate
 ```
 
-`knot migrate` reads, in order when present: `package-lock.json`, `yarn.lock`, `pnpm-lock.yaml`, then `package.json` dependencies. Original lockfiles are never rewritten. The result is `knot.toml` (if missing) and `knot.lock`. Plugins and patches are not imported Ã¢â‚¬â€ versions only. See [migration](docs/migration.md).
+`knot migrate` reads, in order when present: `package-lock.json`, `yarn.lock`, `pnpm-lock.yaml`, then `package.json` dependencies. Original lockfiles are never rewritten. The result is `knot.toml` (if missing) and `knot.lock`. Plugins and patches are not imported ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â versions only. See [migration](docs/migration.md).
 
 Leave Knot:
 
@@ -552,8 +533,8 @@ The living list is [ROADMAP.md](ROADMAP.md). Changes land in [CHANGELOG.md](CHAN
 - [Workspaces](docs/workspaces.md)
 - [Imports](docs/imports.md)
 - [Security](docs/security.md)
-- [Offline](docs/offline.md) Ã‚Â· [Snapshots](docs/snapshots.md) Ã‚Â· [CI](docs/ci.md)
-- [Migration](docs/migration.md) Ã‚Â· [Ejection](docs/ejection.md)
+- [Offline](docs/offline.md) Ãƒâ€šÃ‚Â· [Snapshots](docs/snapshots.md) Ãƒâ€šÃ‚Â· [CI](docs/ci.md)
+- [Migration](docs/migration.md) Ãƒâ€šÃ‚Â· [Ejection](docs/ejection.md)
 - [Troubleshooting](docs/troubleshooting.md)
 - [Architecture](ARCHITECTURE.md)
 - [Threat model](THREAT_MODEL.md)
@@ -563,11 +544,11 @@ The living list is [ROADMAP.md](ROADMAP.md). Changes land in [CHANGELOG.md](CHAN
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Please read the [code of conduct](CODE_OF_CONDUCT.md) and [security policy](SECURITY.md) before opening issues that involve integrity or execution.
 
-Integrity failures, store poisoning, archive path traversal, script-policy bypass, and provenance confusion are security bugs. Do not open a public issue for those Ã¢â‚¬â€ use [GitHub Security Advisories](https://github.com/theworker02/Knot.js/security/advisories/new).
+Integrity failures, store poisoning, archive path traversal, script-policy bypass, and provenance confusion are security bugs. Do not open a public issue for those ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â use [GitHub Security Advisories](https://github.com/theworker02/Knot.js/security/advisories/new).
 
 ## License
 
-**Source-available proprietary** â€” evaluation under [LICENSE](./LICENSE); commercial / production use via [COMMERCIAL.md](./COMMERCIAL.md). See [LICENSE_TRANSITION_NOTICE.md](./LICENSE_TRANSITION_NOTICE.md) and [NOTICE](./NOTICE).
+**Source-available proprietary** Ã¢â‚¬â€ evaluation under [LICENSE](./LICENSE); commercial / production use via [COMMERCIAL.md](./COMMERCIAL.md). See [LICENSE_TRANSITION_NOTICE.md](./LICENSE_TRANSITION_NOTICE.md) and [NOTICE](./NOTICE).
 
 
 ---
