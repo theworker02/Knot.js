@@ -1,4 +1,4 @@
-﻿{
+{
     "name":  "@magnexis/knot.js-core",
     "version":  "0.3.0",
     "description":  "Content-addressed dependency resolution, storage, and execution for Knot.js",
@@ -54,6 +54,6 @@
                          "yaml":  "^2.7.0"
                      },
     "devDependencies":  {
-                            "@types/node":  "^22.10.5"
+                            "@types/node":  "^26.6.2"
                         }
 }

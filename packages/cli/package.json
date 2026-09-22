@@ -1,4 +1,4 @@
-﻿{
+{
     "name":  "@magnexis/knotjs",
     "version":  "0.3.1",
     "description":  "Knot.js CLI â€” dependencies without node_modules",
@@ -44,6 +44,6 @@
                          "@magnexis/knot.js-core":  "0.3.0"
                      },
     "devDependencies":  {
-                            "@types/node":  "^22.10.5"
+                            "@types/node":  "^26.6.2"
                         }
 }
