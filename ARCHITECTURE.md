@@ -2,10 +2,10 @@
 
 Knot is a TypeScript monorepo with two published packages:
 
-| Package        | Role                                                            |
-| -------------- | --------------------------------------------------------------- |
+| Package                  | Role                                                            |
+| ------------------------ | --------------------------------------------------------------- |
 | `@magnexis/knot.js-core` | Store, resolver, registry source, runtime, security, public API |
-| `@magnexis/knotjs` | CLI (`knot`)                                                    |
+| `@magnexis/knotjs`       | CLI (`knot`)                                                    |
 
 Internal modules inside `@magnexis/knot.js-core` match the conceptual packages from the design: `store`, `resolver`, `runtime`, `security`, `registry`. They are not separate npm packages. Extra package boundaries would add versioning cost without changing the execution model.
 

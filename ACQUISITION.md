@@ -23,14 +23,14 @@
 
 ## 2. Product snapshot
 
-| Item | Detail |
-|------|--------|
-| Product | Knot.js |
-| Repo | `theworker02/Knot.js` |
-| Language | TypeScript |
-| Open source? | **No** â€” proprietary |
-| Rightsholder | theworker02 |
-| Diligence pack | `docs/acquisition/` |
+| Item           | Detail                 |
+| -------------- | ---------------------- |
+| Product        | Knot.js                |
+| Repo           | `theworker02/Knot.js`  |
+| Language       | TypeScript             |
+| Open source?   | **No** â€” proprietary |
+| Rightsholder   | theworker02            |
+| Diligence pack | `docs/acquisition/`    |
 
 ### Capability highlights (from current materials)
 
@@ -72,11 +72,12 @@ Typical transferable surfaces:
 
 Minimal path (no secrets required unless README says otherwise):
 
-```
+````
 ```bash
 npm install -g @magnexis/knotjs
 npm install @magnexis/knot.js-core
-```
+````
+
 ```text
 declare Ã¢â€ â€™ resolve Ã¢â€ â€™ verify Ã¢â€ â€™ store Ã¢â€ â€™ execute
               Ã¢â€ â€¢
@@ -84,6 +85,7 @@ declare Ã¢â€ â€™ resolve Ã¢â€ â€™ verify Ã¢â€ â€�
               Ã¢â€ â€¢
      share immutable content
 ```
+
 ```text
                     KNOT
 Application Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€ â€™ Resolver Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€ â€™ Execution
@@ -95,6 +97,7 @@ Application Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€ â€™ Resolver Ã�
           Ã¢â€â€š
      Shared Cache
 ```
+
 ```text
 project
 Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ node_modules
@@ -102,6 +105,7 @@ project
     Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ dependency
     Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ thousands more files
 ```
+
 ```text
 project
 Ã¢â€â€š
@@ -113,6 +117,7 @@ project
           Ã¢â€ â„¢     Ã¢â€ â€œ     Ã¢â€ Ëœ
       Project Project Project
 ```
+
 ```
 
 Extended evaluation: `docs/acquisition/BUYER_EVALUATION.md`. Written NDA / evaluation grants may be required for private materials.
@@ -178,3 +183,4 @@ This package is informational and **does not** create a binding offer, grant of 
 ---
 
 *Document version: 2.0.0 / 2026-09-22 Â· Classification: acquisition briefing*
+```

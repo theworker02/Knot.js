@@ -1,49 +1,49 @@
 {
-    "name":  "@magnexis/knotjs",
-    "version":  "0.3.1",
-    "description":  "Knot.js CLI â€” dependencies without node_modules",
-    "license":  "SEE LICENSE IN LICENSE",
-    "type":  "module",
-    "engines":  {
-                    "node":  "\u003e=20.10.0"
-                },
-    "bin":  {
-                "knot":  "dist/bin.js",
-                "knotjs":  "dist/bin.js"
-            },
-    "main":  "./dist/index.js",
-    "types":  "./dist/index.d.ts",
-    "files":  [
-                  "dist",
-                  "LICENSE",
-                  "README.md"
-              ],
-    "repository":  {
-                       "type":  "git",
-                       "url":  "git+https://github.com/theworker02/Knot.js.git",
-                       "directory":  "packages/cli"
-                   },
-    "homepage":  "https://github.com/theworker02/Knot.js",
-    "bugs":  {
-                 "url":  "https://github.com/theworker02/Knot.js/issues"
-             },
-    "keywords":  [
-                     "knot",
-                     "cli",
-                     "package-manager",
-                     "content-addressed",
-                     "javascript",
-                     "typescript"
-                 ],
-    "scripts":  {
-                    "build":  "tsc -p tsconfig.json",
-                    "clean":  "node -e \"require(\u0027fs\u0027).rmSync(\u0027dist\u0027,{recursive:true,force:true})\"",
-                    "typecheck":  "tsc -b"
-                },
-    "dependencies":  {
-                         "@magnexis/knot.js-core":  "0.3.0"
-                     },
-    "devDependencies":  {
-                            "@types/node":  "^26.6.1"
-                        }
+  "name": "@magnexis/knotjs",
+  "version": "0.3.1",
+  "description": "Knot.js CLI â€” dependencies without node_modules",
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "engines": {
+    "node": "\u003e=20.10.0"
+  },
+  "bin": {
+    "knot": "dist/bin.js",
+    "knotjs": "dist/bin.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theworker02/Knot.js.git",
+    "directory": "packages/cli"
+  },
+  "homepage": "https://github.com/theworker02/Knot.js",
+  "bugs": {
+    "url": "https://github.com/theworker02/Knot.js/issues"
+  },
+  "keywords": [
+    "knot",
+    "cli",
+    "package-manager",
+    "content-addressed",
+    "javascript",
+    "typescript"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "node -e \"require(\u0027fs\u0027).rmSync(\u0027dist\u0027,{recursive:true,force:true})\"",
+    "typecheck": "tsc -b"
+  },
+  "dependencies": {
+    "@magnexis/knot.js-core": "0.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.1"
+  }
 }

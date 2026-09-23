@@ -550,7 +550,6 @@ Integrity failures, store poisoning, archive path traversal, script-policy bypas
 
 **Source-available proprietary** Ã¢â‚¬â€ evaluation under [LICENSE](./LICENSE); commercial / production use via [COMMERCIAL.md](./COMMERCIAL.md). See [LICENSE_TRANSITION_NOTICE.md](./LICENSE_TRANSITION_NOTICE.md) and [NOTICE](./NOTICE).
 
-
 ---
 
 ## License & acquisition
