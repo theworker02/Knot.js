@@ -1,4 +1,4 @@
-﻿{
+{
     "name":  "@magnexis/knot.js-core",
     "version":  "0.3.0",
     "description":  "Content-addressed dependency resolution, storage, and execution for Knot.js",
