@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="docs/logo.svg" alt="Knot.js official logo" width="128" height="128">
+</p>
+
+<p align="center">
   <img src="branding/logo.png" width="420" alt="Knot.js ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â Dependencies without node_modules">
 </p>
 
